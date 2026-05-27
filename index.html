@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR File Scanner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>QR Code Scanner</h1>
+        <p class="subtitle">Upload an image to scan QR code</p>
+
+        <div class="upload-box">
+            <input type="file" id="qr-input-file" accept="image/png, image/jpeg, image/jpg, image/webp" hidden>
+            <label for="qr-input-file" class="upload-btn">Choose Image</label>
+            <p id="file-name">No file selected</p>
+        </div>
+
+        <div id="image-preview" class="hidden">
+            <img id="preview-img" alt="Preview">
+        </div>
+
+        <div id="status" class="status hidden"></div>
+
+        <div id="result" class="result hidden">
+            <h3>Decoded Result:</h3>
+            <p id="decoded-text"></p>
+            <button id="open-link-btn" class="open-btn hidden">Open Link</button>
+        </div>
+    </div>
+
+    <!-- html5-qrcode library from CDN -->
+    <script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
